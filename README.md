@@ -1,4 +1,4 @@
-# Connecting to a Key Vault via a Private Endpoint #
+# Connect to Key Vault using an Azure Private Endpoint #
 
 This sample demonstrates how to create a Linux Virtual Machine in a virtual network that privately accesses a Key Vault and an ADLS Gen 2 blob storage account using two [Azure Private Endpoints](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview). Azure Private Endpoint is a network interface that connects you privately and securely to a service powered by Azure Private Link. Private Endpoint uses a private IP address from your virtual network, effectively bringing the service into your virtual network. The service could be an Azure service such as Azure Storage, Azure Cosmos DB, SQL, etc. or your own Private Link Service. For more information, see [What is Azure Private Link?](https://docs.microsoft.com/en-us/azure/private-link/private-link-overview). For more information on the DNS configuration of a private endpoint, see [Azure Private Endpoint DNS configuration](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns).
 
