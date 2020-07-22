@@ -414,8 +414,8 @@
     "keyVaultPrivateEndpointId": "[resourceId('Microsoft.Network/privateEndpoints', parameters('keyVaultPrivateEndpointName'))]",
     "blobStorageAccountPrivateEndpointId": "[resourceId('Microsoft.Network/privateEndpoints', parameters('blobStorageAccountPrivateEndpointName'))]",
     "aRecordId": "[resourceId('Microsoft.Network/privateDnsZones/A', variables('keyVaultPrivateDnsZoneName'), parameters('keyVaultName'))]",
-    "keyVaultPrivateEndpointGroupId": "vault",
-    "blobStorageAccountPrivateEndpointGroupId": "blob"
+    "keyVaultPrivateEndpointGroup": "vault",
+    "blobStorageAccountPrivateEndpointGroup": "blob"
   },
   "resources": [
     {
@@ -1143,7 +1143,7 @@
             "properties": {
               "privateLinkServiceId": "[variables('keyVaultId')]",
               "groupIds": [
-                "[variables('keyVaultPrivateEndpointGroupId')]"
+                "[variables('keyVaultPrivateEndpointGroup')]"
               ]
             }
           }
@@ -1174,7 +1174,7 @@
             "properties": {
               "privateLinkServiceId": "[variables('blobStorageAccountId')]",
               "groupIds": [
-                "[variables('blobStorageAccountPrivateEndpointGroupId')]"
+                "[variables('blobStorageAccountPrivateEndpointGroup')]"
               ]
             }
           }
