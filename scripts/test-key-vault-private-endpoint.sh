@@ -44,14 +44,12 @@ sudo apt install -y curl traceroute
 # Install Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-# Run nslookup to verify that the <storage-account>.dfs.core.windows.net public hostname of the storage account 
-# is properly mapped to <storage-account>.privatelink.dfs.core.windows.net by the privatelink.dfs.core.windows.net 
-# private DNS zone and the latter is resolved to the private address by the A record
+# Run nslookup to verify that public hostname of the Key Vault resource
+# is properly mapped to the private address of the provate endpoint
 nslookup $keyVaultServiceEndpoint
 
-# Run nslookup to verify that the <storage-account>.blob.core.windows.net public hostname of the storage account 
-# is properly mapped to <storage-account>.privatelink.blob.core.windows.net by the privatelink.blob.core.windows.net 
-# private DNS zone and the latter is resolved to the private address by the A record
+# Run nslookup to verify that public hostname of the Blob storage account 
+# is properly mapped to the private address of the provate endpoint
 nslookup $blobServicePrimaryEndpoint
 
 # Login using the virtual machine system-assigned managed identity
